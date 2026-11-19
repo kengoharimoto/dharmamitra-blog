@@ -46,11 +46,80 @@ Things have changed. For one, Dharmamitra can search the Sanskrit, Chinese, Tibe
 
 ## The fragments
 
-<!-- - Sources: SHT I–XI and BLSF I–III, read from the printed volumes (OCR).
-  - How many entries, how many undetermined or labelled only by genre ("Sūtra-Fragment",
-    "Abhidharma-Text").
-  - What an entry gives: a few broken lines, often 50–150 legible letters.
-  - SHT XII and XIII were not available here (see "Already identified"). -->
+<!-- THE FRAGMENTS: Claude's draft of 19 Nov 2026, each paragraph in quotation marks as in
+the Nepalese scribes post. To check before publishing:
+  - The counts of the third and fourth paragraphs and the table were made on 19 Nov 2026 from
+    the server data (data/idp_catalogue.tsv, sht_entries.jsonl, fragments.jsonl,
+    generic.jsonl, results/xlang*translations.tsv) with the rules of make_fragments.py.
+    They are in catalogue numbers; 1,581 = records of fragments.jsonl (1,071) and
+    generic.jsonl (510).
+  - "Numbers from 5800 on": 5799 is taken as the last number of SHT XI (REVIEW section G).
+    Check that, and whether XII and XIII cover all of 5800–7426.
+  - "No transliteration printed" = the parsed entry has no transliteration lines. Six
+    samples were all tiny scraps described without text; a parser miss would also land here.
+  - ON HOLD until the re-parse and re-run on waffle (handoff note there:
+    research/turfan-sht/results/PARSER_MISSES.md). Afterwards refresh the table and the
+    counts from scripts/count_coverage.py, rewrite the paragraph on the parser, and add
+    any new findings.
+  - "Missed by the parser" (218), looked into on 19 Nov 2026 with a rough script: 18
+    transferred or merged numbers (IDP: "Überführt nach", "Aufgegangen in" and the like);
+    175 with the heading glued to the end of the preceding line in the OCR (e.g. 4413, 3485,
+    3520); 18 with a heading at line start in an unknown form (2170 with a footnote number,
+    "ohne Nummer"); 7 with no heading found (1628, 1688, 4302, 4359, 4360, 4366, 5268).
+    About 96 have a run of 8+ letters. These figures are estimates: for numbers below 1000
+    the script may have caught index lines and not entries. The 16 searched fragments that
+    carry a missed entry's text: 2169 (with 2170, 2171, 2173), 3487, 3961, 4118, 4500, 4557,
+    4772, 4779, 4825, 4856, 4934, 4976, 5039, 5219; none is in FINDINGS.html or the
+    evidence pages. The parser has not been changed and nothing was re-run.
+  - British Library: 768 entries marked unidentified in BLSF I, II.1 and III.1 (126, 137,
+    505); 84 without transliteration lines; 377 in data/cas_fragments.jsonl. Parser misses
+    were not looked into for these volumes. The last 99 pieces went to Dharmamitra from 30
+    letters, so a few more than 159 were sent.
+  - 1,075 to Dharmamitra is by the script's threshold (40 legible letters), not counted
+    from the query cache. 819 through Chinese is counted from the translation files.
+  - INTRODUCTION: IDP's catalogue has entries for 7,304 catalogue numbers; 7,426 is the
+    highest number. "4,712 of the 7,426" should be "of 7,304", or "of the numbers up to 7426".
+  - OCR: one tool throughout, Chandra OCR 2 (datalab) on the workstation, for SHT I–XI
+    (scripts/run_ocr.sh; README; REVIEW section G for VIII and XI) and for BLSF I–III and
+    StPSF I (REVIEW section H; scripts/parse_cas_ocr.py). An older pdftotext/Tesseract text
+    of the SHT volumes existed but was not used, as it loses the diacritics.
+  - Transliterations online: the README of research/turfan-sht says "No transliterations of
+    the SHT fragments are online", after looking at idp.bbaw.de and the BBAW Turfan site only.
+    You found that the IDP site at the British Library has them and that it blocks machine
+    access. The first paragraph says so on your word; the study's notes record no attempt
+    on the BL site. The README still carries the wrong statement.
+  - The Berlin IDP database and the BBAW Turfan site became inaccessible a few days before
+    19 Nov 2026 (your observation), hence "were open to it at the time". The findings table
+    and evidence cards now link to the BL site, so the post should point there for
+    photographs too.
+  - For "Limitations": the text searched is OCR of the printed volumes, because the online
+    transliterations could not be read by machine.
+  - No transliteration is quoted (point 1 at the top). -->
+
+"The first step was to get the readings of the fragments. While transliterations of the IDP fragments are online, on the IDP site at the British Library, that site blocks automated access; the Berlin IDP database and the Turfan site of the Berlin Academy gave only photographs and, for each fragment, a one-line identification from the online catalogue. (The site became inaccessible after the study.) So, the study read the printed catalogue instead. We ran Chandra OCR over SHT I–XI on our workstation, and a parser cut the result into entries: catalogue number, shelfmark, script type, physical description, transliteration and notes."
+
+"Which entries count as unidentified was decided from IDP's online catalogue. One catalogue number often covers several pieces (a, b, c and so on), and the online catalogue lists each piece separately with its own identification. We counted a catalogue number as undetermined only when all of its pieces are marked 'Noch nicht bestimmt'; a number with some pieces identified and others not was left out. We added a second group: fragments that carry only a label of genre or collection, such as 'Sūtra-Fragment', 'Abhidharma-Text', 'Dhāraṇī' or 'Medizinisches Fragment', or a hedged one ('Wahrscheinlich …'). They are in effect unidentified as well."
+
+"We treated the British Library's Sanskrit fragments from Central Asia in the same way. They are published in the three volumes of *The British Library Sanskrit Fragments* (BLSF), where the editors write an identification into the heading of each piece or mark it 'not yet identified'. These volumes were read with the same OCR and parsed like the SHT volumes."
+
+"IDP's online catalogue marks 4,712 catalogue numbers as 'Noch nicht bestimmt'. Of these, 1,398 have numbers from 5800 on, which SHT I–XI do not describe, so they were out of our reach. That leaves 3,314 undetermined numbers in the volumes we read, and 703 more that have only a genre label: 4,017 in all. In the British Library volumes, 768 pieces are without an identification."
+
+"Most of them could not be searched, because there is nothing to search. For 2,100 of the 4,017 SHT numbers the catalogue prints no transliteration: the entry describes a scrap of one or two centimetres and ends 'noch nicht bestimmt'. Another 103 have a transliteration in which no eight letters in a row are legible. Of the British Library pieces, 391 are too small in the same two ways."
+
+"A further 218 SHT numbers were missed by our parser. We looked into why. Eighteen are not fragments of their own: the number was transferred to another collection or merged into another number. For about 175, the OCR had joined the heading of the entry to the end of the last line of the entry before it, usually at a page break, and the parser looks for a heading at the beginning of a line. Another 18 have a heading in a form the parser did not know, and for seven we found no heading in the OCR at all. About a hundred of the missed entries have enough text to be searched; they have not been searched yet. Where the heading was lost, the text of the entry was read as part of the entry before it. This happened to 16 fragments that we did search. None of them is among the findings."
+
+| | SHT, undetermined | SHT, genre label only | SHT together | British Library |
+|---|---|---|---|---|
+| Unidentified in the volumes read | 3,314 | 703 | 4,017 | 768 |
+| No transliteration printed | 1,985 | 115 | 2,100 | 84 |
+| No run of eight legible letters | 90 | 13 | 103 | 307 |
+| Missed by the parser | 162 | 56 | 218 | not checked |
+| **Not searched** | **2,237** | **184** | **2,421** | **391** |
+| **Searched** | **1,077** | **519** | **1,596** | **377** |
+
+"The 1,596 SHT numbers make 1,581 fragments as we searched them, since pieces that the catalogue joins count once. With the 377 British Library pieces, 1,958 fragments were searched. Not all of them were searched in every way. All went through the match against the e-text library. The 1,234 with at least 40 legible letters (1,075 from Berlin, 159 from London) also went to Dharmamitra search, and 936 of those (819 and 117) were sent through Chinese as well. The remaining 724, with fewer than 40 letters, were tried against the e-text library only."
+
+"SHT XII and XIII were not available to us when the searches ran. This matters more than it may seem: each later volume carries additions and corrections to the earlier ones, among them lists of fragments that have been identified since. We come back to this below."
 
 ## Three ways of finding a text
 
