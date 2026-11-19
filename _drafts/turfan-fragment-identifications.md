@@ -26,10 +26,23 @@ table, or one evidence card with the Chinese beside it. See points 1, 3 and 4 ab
 ![alt text]({{ '/assets/images/turfan-fragments-XXXX.png' | relative_url }})
 -->
 
-<!-- INTRODUCTION, in your own voice. Possible points:
-  - what the SHT catalogue is, and how many fragments it still lists as "noch nicht bestimmt";
-  - why you tried this, and how long it took;
-  - the sentence that says what the post reports. -->
+<!-- INTRODUCTION. To check: 4,712 of SHT 1–7426 is the count in IDP's online catalogue
+(README of research/turfan-sht), and IDP can be stale; the counts in the last paragraph are
+those of the findings page on 17 Nov. -->
+
+So, we had this wonderful workshop in Komazawa and Sendai about Abhidharma texts in the week of 9–13 November 2026. During the workshop, our long time friend, Prof. Kazuo Kano of Komazawa University came up with an idea: what if we apply AI and other computational tools that we have now to identify unidentified Sanskrit manuscript fragments? We decided to first focus on Central Asian manuscript fragments made accessible through the International Dunhuang Programme (IDP). Kano started to work on his own to see if there are fragments of texts he was interested in. He identified a number of until then unidentified fragments. On our side, we started by basically prompting: "Will you identify the fragments that have not been identified?" in Claude Code on our work station. Claude obviously understood that it had to look for identifications in any texts, including those whose Sanskrit texts are not yet known. That meant looking into Chinese and Tibetan translations as well as Pāli texts that might have had Sanskrit equivalents. 
+
+The following paragraph was written by Claude:
+
+"The Sanskrit manuscripts that the German expeditions brought back from Turfan and other sites on the northern Silk Road between 1902 and 1914 are described in the catalogue *Sanskrithandschriften aus den Turfanfunden* (SHT). Its first volume appeared in 1965 and its thirteenth this year. Most of what it describes are fragments: a piece of a leaf with a few broken lines, sometimes only a few letters. The editors have given a text to a great many of them, which is remarkable considering how little there is to go on. Still, many entries carry the label 'noch nicht bestimmt', not yet determined. In the online catalogue of IDP Berlin, 4,712 of the 7,426 catalogue numbers have that label, and others are described only by genre: 'Sūtra-Fragment,' 'Abhidharma-Text.'"
+
+Identifying a manuscript fragment was a time consuming and inefficient job. There may be several degrees of identification. From the quickest to the hardest: 1) You already know the text and once you see what's written on the manuscript, you know what it is; 2) You have a specialized knowledge of the subject matter and you know where to look at. In modern times, this was being increasingly helped by the steady increase of available e-texts. You pick up a few keywords and look for them in your collection, and find the best match; 3) You have some idea what the text is about. But however hard you try, you do not find a good Sanskrit match. You turn Tibetan, Chinese, and Pāli, guessing how the word you are looking for may turn up in the respective languages. Knowing what the fragment is about and knowing where to look in the Tibetan/Chinese/Pali corpora would have been a help, but there are chances you miss the equivalents because the translators used different words, or Chinese letters, from what you expect. 
+
+There is an added difficulty when trying to identify such fragments as those from Central Asia. Often, those fragments are only small pieces of a folio. You do not know how much of the text is lost on the left and right of the folio. Humans would have significant difficulty when such a manuscript piece records one or two words on a line.
+
+Things have changed. For one, Dharmamitra can search the Sanskrit, Chinese, Tibetan and Pāli corpora by meaning. So, we can now identify texts even when their Sanskrit version is not known. Secondly, AI has become so powerful that it can "read"... practically anything, including catalogues and even compare photographs if necessary. This meant that it can create a database just by reading PDF files of the catalogues.
+
+[Mostly Claude] "This post reports what came out. Thirty-six fragments could be given a text and 21 more have a plausible one. Ten confirm a parallel that the editors had already pointed to. There were another 35 identifications we initially thought to have been new identifications but then it turned out they had been identified outside where we were looking. We keep them in the list as evidence our method independently worked."
 
 ## The fragments
 
@@ -44,7 +57,13 @@ table, or one evidence card with the Chinese beside it. See points 1, 3 and 4 ab
 ### Matching against a Sanskrit e-text library
 
 <!-- Runs of letters from the fragment searched in the library; what counts as a match
-(letters matched, number of runs, recto and verso in order). One example that is safe to
+(letters matched, number of runs, recto and verso in order).
+Describe the matcher as it works: the score is how many of the fragment's letters are
+covered within a 3,000-letter window of a candidate text. It does not estimate line length
+or judge the intervals between matches; spacing was reasoned about only in single cases
+(e.g. the join 1927 + 1932). The point moved here from the introduction: a machine can align
+the few surviving words of each line with a candidate and judge the match by their intervals.
+Present it as what is possible, or as what was done in those cases. One example that is safe to
 name, e.g. 1632 Bhadracarī vv. 2–3 or 928 Buddhacarita 11.20–29. -->
 
 ### Dharmamitra search
