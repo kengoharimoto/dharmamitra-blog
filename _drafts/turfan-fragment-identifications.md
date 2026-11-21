@@ -172,133 +172,115 @@ quotation marks as in the Nepalese scribes post. To check before publishing:
 
 ## Methods
 
-<!-- Six subsections since 21 Nov 2026. The first, third and fourth are the searches of the
-first run; the second and fifth were added on 20–21 Nov after the comparison with SHT XII
-and XIII; the sixth is the step that follows every search. They are ordered by kind (each later method follows the one it grew out of), not
-by date; "The fragments" tells the order in time. -->
+<!-- METHODS: Claude's prose of 21 Nov 2026, each paragraph in quotation marks, written from
+the README (Method, steps 5–13) and results/REVIEW.md of research/turfan-sht at commit
+3d581bf. Six subsections, ordered by kind (each later method follows the one it grew out
+of), not by date; "The fragments" tells the order in time. To check, for all of them:
+  - Short pieces of transliteration are quoted (1632, 1686, 1309, 1420, 1946, 4501,
+    Or.15009/468), on your word of 18 Nov that quoting SHT transliterations is fine; point 1
+    at the top still stands for the British Library piece.
+  - Fragments named as examples must be cleared (point 2 at the top). Of those named as
+    new, only 1632, 1686, 1433, 1685 and 2028 were on the page at K. Kano's check of
+    13 Nov; 1946, 1837, 1380, 1574, 1622, 2094, 1252, 4501, 1883, 1519 are not checked
+    against SHT XII and XIII.
+  - Figures are those of the notes; none was recounted for this section. -->
 
 ### Matching against a Sanskrit e-text library
 
-<!-- Runs of letters from the fragment searched in the library; what counts as a match
-(letters matched, number of runs, recto and verso in order).
-Describe the matcher as it works: the score is how many of the fragment's letters are
-covered within a 3,000-letter window of a candidate text. It does not estimate line length
-or judge the intervals between matches; spacing was reasoned about only in single cases
-(e.g. the join 1927 + 1932). The point moved here from the introduction: a machine can align
-the few surviving words of each line with a candidate and judge the match by their intervals.
-Present it as what is possible, or as what was done in those cases. One example that is safe to
-name, e.g. 1632 Bhadracarī vv. 2–3 or 928 Buddhacarita 11.20–29.
-Thresholds as they are: a hit is kept if two runs cover 26 letters or one run 30; runs
-under ten letters give none. Calibration on 790 identified fragments (README, step 5): a
-hit for 273 of 396 with 100 or more legible letters, 48 of 203 with 40–100, almost none
-below 40. -->
+<!-- README step 5; XII_XIII_MISSES.md for the thresholds. 1632: REVIEW A (88 of 104
+letters, 3 runs). "About a minute" is on 100 cores of the workstation. The last paragraph
+keeps the point that the matcher does not judge intervals; 1927 + 1932 are K. Kano's
+subject (Kano 2027), named here only as the case where spacing was reasoned about: check
+with him or take the sentence out. -->
+
+"The first search is a plain one: does the wording of the fragment stand in a Sanskrit text that we have as a file? The library is a collection of 6,503 Sanskrit e-texts. A fragment is not a continuous text, so each transliterated line is cut at its lacunae into runs, stretches of letters with no gap. The editors' brackets are dropped and the letters kept. Runs and library are then folded in the same loose way, so that differences of spelling do not count: no diacritics, *b* and *v* alike, double consonants single, the nasals alike."
+
+"Each run is broken into overlapping pieces of ten letters, and the pieces are looked up in the library. Pieces that occur in more than forty files are thrown out as stock. For every fragment and every file, the score is the number of the fragment's letters that are covered within the best stretch of 3,000 letters of that file. A hit is kept when two runs together cover 26 letters, or one run 30. All fragments against all files take about a minute."
+
+"We tried the matcher first on 790 fragments that the catalogue does identify. It found a text for 273 of the 396 with a hundred legible letters or more, for 48 of the 203 with forty to a hundred, and for almost none below forty. When sixty letters or more were covered, the text was nearly always the right one or a parallel version of it. What it missed were mostly texts that survive only in Chinese, Tibetan or Pāli. A clear case among the undetermined fragments is SHT VII 1632: 88 of its 104 letters, in three runs, stand in verses 2 and 3 of the Bhadracarī (*kṣetrarajopamakāyapramāṇaiḥ sarvajināna karomi praṇāmam*)."
+
+"The matcher counts letters. It does not estimate how long a line of the leaf was, and it does not judge whether the distances between the matched words fit the lost text between them. That was reasoned about only in single cases, such as the question whether SHT 1927 and 1932 are two pieces of one leaf."
 
 ### Matching by piece
 
-<!-- Added 20–21 Nov (REVIEW Y, Z; README, step 12).
-  - Why: in the first run the unit was the catalogue number, with all its pieces pooled.
-    A number with one piece of one text and another of a second was treated as one text
-    (1198: pieces b–c Saddharmapuṇḍarīka, piece a Madhyāntavibhāgabhāṣya, missed), and
-    numbers of mixed status were not searched at all.
-  - How: each entry is cut into blocks, one side of one piece each, 4,912 in all; the 72
-    numbers of mixed status are included. The same matcher with lower thresholds, and a
-    hit under the old thresholds is kept only when no more than two other works come near
-    it and the text is Buddhist. Without that test the lower thresholds give many chance
-    hits in the purāṇas and tantras.
-  - What it gave: 22 per cent more hits on the identified fragments. It recovers the near
-    misses 1198 a, 4221, 4246 and 412 fragm. 36. The 85 blocks on numbers with nothing
-    recorded were read one by one: 1380 (Madhyamāgama 28), 1574 b (Larger Prajñāpāramitā,
-    ch. 76), 1622 (maṅgala verses), 2094 (Abhidharmakośakārikā III 54–56, 61–62); plausible
-    2127, 4501, 1636, 1185. Of the 40 mixed numbers read by piece, 29 only confirm pieces
-    already named; new is 1252 b and c. Also 4604 + 1429 (Saṃyuktāgama 1172–1173).
-  - What it does not reach: runs under ten letters (4180 fragm. 4 was found only by
-    reading), and 4278, 1202 b. -->
+<!-- REVIEW Y, Z; README step 12; XII_XIII_MISSES.md, cause C and the 60 never searched.
+The block count is 4,912 after the parser fix of 21 Nov (4,963 before); "22 per cent" is
+144 added to 647 on the identified fragments; 247 of 372 is from the first run of the rule
+without the restriction. -->
+
+"In the first run the unit was the catalogue number, with all its pieces pooled. The comparison with SHT XII and XIII showed what this costs. SHT V 1198 has the Saddharmapuṇḍarīka on two of its pieces and, as SHT XIII now says, the Madhyāntavibhāgabhāṣya on a third; the number was taken as one text and the third piece was not looked at again. And a number with some pieces identified and others not was in neither of our sets."
+
+"So each entry was cut into blocks, one side of one piece each: 4,912 blocks, those of 72 numbers of mixed status among them. The same matcher was run with lower thresholds. Lower thresholds alone bring in chance: in a first trial, 247 of 372 short hits were in purāṇas, tantras and kāvya. A short hit is therefore kept only when no more than two other works come near it and the text is a Buddhist one. On the identified fragments this rule adds 22 per cent to the hits."
+
+"It recovered pieces that SHT XIII has and that we had missed by a few letters, among them 1198 a. The blocks on numbers for which nothing had been recorded were then read one by one. Four could be given a text: SHT VI 1380 (Madhyamāgama 28), 1574 piece b (the Larger Prajñāpāramitā, chapter 76), VII 1622 (a set of maṅgala verses) and IX 2094 (verses of the Abhidharmakośa without the Bhāṣya). Of the forty mixed numbers that had hits, 29 only confirmed the pieces already named; one gave something new, pieces b and c of SHT VI 1252. What this search still does not reach are pieces of a line with fewer than ten letters."
 
 ### Dharmamitra search
 
-<!-- Semantic search over the Sanskrit, Chinese, Tibetan and Pāli corpora: what it found
-that string matching did not, and where it only characterises a piece (genre, type of text)
-without identifying it.
-Added 21 Nov (REVIEW X; XII_XIII_MISSES.md, cause B): 1,500 of the 3,274 Sanskrit files of
-the local database were not returned by the search that was queried, among them eighteen
-files of the Tridaṇḍamālā; six of the SHT XIII identifications were missed for this reason.
-The files were written out and matched directly. See the note in "The fragments" on whether
-and how to say this. -->
+<!-- README step 7; REVIEW E, X; XII_XIII_MISSES.md, cause B. The second paragraph is a
+judgement of mine from the notes: no row of the page rests on the Dharmamitra search of
+the Sanskrit alone, as far as the notes show (not checked row by row). You may see it
+differently; this is the Dharmamitra blog. The third paragraph states the index gap;
+decide whether and how to say it (note in "The fragments"). "Ascribed to Aśvaghoṣa" is from the database's file names (SA_T10_Aśvaghoṣa_Tridaṇḍamālā); check how you want the work described. Cause B of XII_XIII_MISSES.md has six rows, seven with 646. The search used was the local
+stack on the workstation. -->
+
+"Dharmamitra searches the Sanskrit, Chinese, Tibetan and Pāli corpora, by wording and by meaning. Fragments with at least forty legible letters were sent to it: one search by wording for each run of fifteen letters or more, up to six runs, and one search by meaning for the fragment as a whole, with its runs joined. A work counts as a candidate when two of these searches have it among their first five results."
+
+"For Sanskrit texts the search mostly confirmed what the library match had found; for SHT 1632 it named the Gaṇḍavyūha and the Bhadracarī as well. Where no text could be found it often still told us what kind of text a fragment is. For SHT X 4217, a debate that argues with examples of likeness and unlikeness, its nearest neighbours were works of logic; that describes the piece and does not identify it. Its larger part in this study was another one. The Chinese, Tibetan and Pāli that the next subsections use were searched and read in Dharmamitra: the Chinese for the route by translation, the Pāli for the collations, the Tibetan for the two pieces it confirmed."
+
+"One limit came to light through SHT XIII. Many of its identifications rest on the *Tridaṇḍamālā*, an anthology ascribed to Aśvaghoṣa. Eighteen files of that work are in the Dharmamitra database, but the search we queried did not return them, not even for their own sentences. A test of the whole Sanskrit collection showed the same for 1,500 of 3,274 files. We wrote these files out and ran them through the library matcher. With the *Tridaṇḍamālā* files, several of the SHT XIII identifications came out, and so did two fragments that are not among them, SHT VIII 1877 and 1883. The other files confirmed one more and brought nothing new."
 
 ### Through Chinese, by translation
 
-<!-- The main point for this blog: texts lost in Sanskrit. The fragment is translated into
-Chinese by the model, the Chinese is searched in the Taishō, and the hit is then read line
-by line against the fragment.
-  - Why it works for Sarvāstivāda Abhidharma (Jñānaprasthāna, Prakaraṇapāda, Vibhāṣā,
-    Nyāyānusāra), which survives only in Xuanzang's translations.
-  - One worked example, line by line: e.g. 1732, a Vibhāṣā on shame and dread of blame
-    (T 1545, 180a–c; T 1546, 136b), or 1686 (Sarvāstivāda Vinaya, T 1435, 267a).
-  - What did not work: the Tibetan route as a search of its own. Since 21 Nov the Tibetan
-    has served to confirm and to complete (REVIEW AC, AG): Or.15010/40 is confirmed by
-    D 132, 280b–281b, and the Tibetan Uttaragrantha (D 7A, pa 233b–234b) has every line of
-    Or.15009/468, also the three headings that T 1441 lacks. Reword accordingly.
-  - Where it failed (REVIEW AA; XII_XIII_MISSES.md, cause E), which leads to the next
-    subsection: where the model's wording is not the translators' (1309:
-    nirodhadarśanaprahātavya rendered freely, not 見滅所斷; 1420: śivapathikā as 屍陀林, the
-    Madhyamāgama has 息止道), and where the longest lines, the only ones translated, are
-    not the telling ones (4442). -->
+<!-- REVIEW I, AA; XII_XIII_MISSES.md, cause E. The example is 1686, not 1732 as the old
+note proposed: 1732 was among the hits of this route that were not kept, and was
+identified later by reading (REVIEW L). 976/986 fragments went this way (see "The
+fragments"). The model is the local mitra-chat-qwen (Ollama); name it if you wish. 1433 at
+T 1543, 800b; 1685 at T 1542, 743b; 2028 at T 1542, 705c–706b. 1389 and 1854+1861 are in
+SHT XII (J. Chung). -->
+
+"Much of what the Turfan fragments contain is lost in Sanskrit. The canonical Abhidharma of the Sarvāstivādins, the Jñānaprasthāna, the Prakaraṇapāda, the Vibhāṣā, survives in the Chinese of Xuanzang and his predecessors, and so do the Āgamas and the Sarvāstivāda Vinaya. No match against Sanskrit files can find such a fragment. For fragments of forty letters or more without a confirmed Sanskrit text, the four longest lines were therefore translated into classical Chinese by a language model, and each translation was searched in the Chinese canon. A work counts when two lines have it among their first five results. Every hit that was kept was then read against the Taishō, line by line."
+
+"SHT VII 1686 shows how it works. The online catalogue has it as 'Adhikaraṇavastu oder Prātimokṣavibhaṅga (?)'. Its lines speak of a suspended monk, one who sides with him, and one who sides with that one: *utkṣiptaka*, *anuvartaka*, and *anuvartaka* again. The search led to the Sarvāstivāda Vinaya, where Upāli asks who is able to split the community (T 1435, 267a), and the Chinese has the same three in the same order: 擯比丘、隨順擯比丘、助隨順擯比丘. In this way SHT VI 1433 was placed in the Jñānaprasthāna and VII 1685 and IX 2028 in the Prakaraṇapāda. Two more fragments that the route gave to the Jñānaprasthāna, 1389 and 1854 + 1861, turned out to be identified in SHT XII already, at the same passages."
+
+"The route fails in two ways. The model translates the sense, and the search needs the translators' words. In SHT VI 1309 it rendered *nirodhadarśanaprahātavya*, 'to be abandoned by seeing cessation', as a free sentence where Xuanzang writes 見滅所斷, and the Jñānaprasthāna did not come up; SHT XII has the fragment at T 1544, 992b–c. In SHT VI 1420 it took *śivapathikā* for a charnel ground, 屍陀林, where the Madhyamāgama has 息止道. And the four longest lines of a fragment are not always the ones that decide: in SHT XI 4442 they are connecting phrases. The same step into Tibetan gave nothing that survived reading. The model repeated stock phrases, or wrote the Sanskrit in Tibetan letters."
 
 ### Through Chinese, by the translators' terms
 
-<!-- Added 20–21 Nov (REVIEW AA; README, step 10). No model is used.
-  - How: a table of 1,080 Sanskrit stems with the renderings of the Chinese translators
-    (Xuanzang, the older Abhidharma translations, the Āgamas, the Vinayas), e.g.
-    nirodhadarśanaprahātavya → 見滅所斷 | 見滅斷 | 盡諦所斷. The stems found in a fragment, in
-    the fragment's order, are its term sequence. Taishō vols 1–32 are searched for windows
-    of 320 characters that have these terms, rarer terms weighing more, and the best
-    windows are scored again by order. The whole run takes under two minutes.
-  - Who wrote the table: REVIEW AA says "written by hand"; it was written in the study,
-    by Claude. Say so if the post describes it.
-  - Calibration: it places what the first route or SHT XII had placed (1309 at T 1544,
-    992b18; 1854+1861; 1685; 1660). On the labelled entries whose label names a work with
-    a Chinese version, the first work is right for 17 of 33 and one of the first three for
-    27. So it proposes a place, and reading decides.
-  - What it gave: 1946 and 1837 (Jñānaprasthāna, T 1544, 931c10–20 and 962a13–22), 4232
-    (plausible), and 1439 + 1753 + 1986, one text with the Mahāvibhāṣā's tetralemmas on the
-    attainments (plausible; which text is open). Not checked against SHT XII and XIII.
-  - Limits: a text needs at least three terms of the table; Abhidharma formulas recur, so
-    the best window is often one of several equal ones; no verse, little plain narrative. -->
+<!-- REVIEW AA, AC; README step 10. "Written in the course of the study" = by Claude, from
+its knowledge of the translations, not from a dictionary; REVIEW AA says "written by
+hand". Calibration figures are those of the second run (1,080 stems): 17 and 27 of 33.
+1946 at T 1544, 931c10–20; 1837 at T 1544, 962a13–22; 1439 + 1753 + 1986, cf. T 1545,
+852c–856b. The false candidate for Or.15010/40 (-gāmī read as anāgāmin) is an example of
+the folding's cost, if one is wanted. -->
+
+"The second route through Chinese uses no model. It rests on a table of 1,080 Sanskrit stems with the words that the Chinese translators use for them: Xuanzang, the older translators of the Abhidharma, those of the Āgamas and the Vinayas. For *nirodhadarśanaprahātavya* the table has 見滅所斷, 見滅斷 and 盡諦所斷. The table was written in the course of the study, not taken from a dictionary, and it can be extended."
+
+"The stems that occur in a fragment, in the order they have there, are its sequence of terms. A stem cut off by a lacuna counts when more than half of it stands at the edge of a run. All renderings are located in volumes 1 to 32 of the Taishō, some 41 million characters. Every stretch of 320 characters is scored by the terms of the fragment that it contains, a rare term weighing more than a common one, and the best stretches are scored again by order: only terms that follow each other in the Chinese as they do in the fragment count. All fragments, block by block, take under two minutes."
+
+"The route places the fragments that the first route or SHT XII had placed, SHT 1309 among them, at the passage SHT XII gives. Tried on entries whose label names a work that exists in Chinese, it has the right work first in about half of the cases and among the first three in about four of five. So it proposes a place, and reading decides. Read against the Chinese, its candidates gave SHT VIII 1946 and 1837, both Jñānaprasthāna. In 1946 the count of the latent defilements ends with *(ārūpya)pratisaṃyuktā ekatriṃśa(t)*, thirty-one that belong to the formless realm, 三十一無色界繫 in the Chinese. SHT VI 1439, VII 1753 and VIII 1986 came out as pieces of one text, which has the Mahāvibhāṣā's sets of four alternatives on the attainments but is not Xuanzang's text word for word."
+
+"Its limits are plain. A fragment needs at least three terms of the table. The formulas of the Abhidharma recur, so the best place is often one of several equal ones, in the root text and in its commentaries. The table has no verse and little plain narrative, and a sūtra with no doctrinal terms, no stock phrases and no names stays out of reach."
 
 ### Reading against a text
 
-<!-- Added 21 Nov. The point: the searches propose, reading decides. Every row of the list
-rests on the fragment read line by line against the text; the cards of the findings page
-show this reading.
-  - A verdict for every candidate (REVIEW T): 787 rows in the ledger, none open. Most
-    candidates are not identifications: kind only 167, known from the entry 154, stock
-    phrases 153, chance 144 (state of REVIEW AB). Four of the SHT XIII identifications had
-    been among the hits and were passed over because no verdict was recorded (1420, 1722,
-    961, 3423 + 1749).
-  - What reading can do that the searches cannot: runs under ten letters (4180 fragm. 4
-    was found only by reading the paragraph); telling a text from a text that quotes it
-    (1877: the series of finger-snap sūtras, of which Tridaṇḍamālā 4.2 quotes one; 1883:
-    not the Akṣaṇasūtra it matched); telling a root text from its commentary (4750: a
-    commentary on the Kośabhāṣya by lemma, not the Nyāyānusāra).
-  - Reading by eye without a hit: the unidentified pieces of BLSF II.1 and III.1 (476
-    pieces of twelve or more letters, REVIEW H) and the 85 blocks on numbers with nothing
-    recorded (REVIEW Z).
-  - Collation with the Pāli (REVIEW AE), the Pāli taken from the Dharmamitra database, not
-    from memory: 4501 is the sūtra of the cloth similes (AN 3.99), three clauses word for
-    word and in order; 1883; Or.15007/329 stays plausible.
-  - Following a text for more fragments. The Divyāvadāna fragments against the Chinese
-    and Tibetan Vinayas (REVIEW AD): 1519 plausibly the story of Sahasodgata as in the
-    Mūlasarvāstivāda Vinayavibhaṅga (T 1442, 813c8–22), the refuge in the plural as in
-    Yijing; 1663 not found. The numerical section of the Sarvāstivāda Vinaya (T 1435,
-    346a–378c; REVIEW AF, AG): its 44 longer passages read and their key words looked up
-    in all Berlin and British Library entries; the quarrel sūtra of 1252 stands there
-    (353b2–c7), which explains a sūtra of threes among sūtras of ones; Or.15009/468, seen
-    on the way, is the list of headings of the Vinayamātṛkā (T 1441, 593b29–c6), and the
-    Tibetan (D 7A, pa 233b–234b) has every line. A search of the same section by terms
-    gave only chance hits.
-  - Photographs: compared in a few cases only (1927 + 1932; 2025 f + 2022; 1973).
-  - Who reads: Claude. Say what was checked by you or by K. Kano, and what was not.
-  - One example worth showing in full: 1252 or Or.15009/468. -->
+<!-- REVIEW T (ledger; the figures 167 / 154 / 153 / 144 are of REVIEW AB and the count on
+waffle), H, Z, AD–AG. The reading was done by Claude; your introduction says so for "the
+study". The last paragraph should say what you or K. Kano checked; I have written only
+what the notes record (Kano's check of 13 Nov, the 32 rows not checked). 4501: AN 3.99 as
+numbered on SuttaCentral (PTS 3.97–98). Or.15009/468: T 1441, 593b29–c6; D 7A, pa
+233b–234b. 1883: T 1435, 356a13–b19. 1252: T 1435, 353b2–c7. -->
+
+"None of these searches identifies anything. Each one proposes a text, and the proposal is then read: the lines of the fragment, in their order, against the lines of the text. The cards of our list show this reading. Most proposals do not survive it. The record of verdicts has 787 candidates, and for most of them the verdict is not an identification: the hit tells only the kind of text (167), the text is already named in the printed entry (154), the shared wording is a stock phrase (153), or the hit is chance (144)."
+
+"That record did not exist at first, and this cost us. Four of the identifications of SHT XIII had been among our hits and were passed over, because no verdict had been written down for them. Since 20 November every candidate has one."
+
+"Reading also does what the searches cannot. It can tell a text from another that quotes it: SHT VIII 1877 matched a chapter of the *Tridaṇḍamālā*, but it repeats the chapter's formula with other objects, so it is the series of sūtras from which the anthology quotes one. It can tell a root text from a commentary: SHT XI 4750 follows a passage of the Nyāyānusāra and is, by its lemmas, a commentary on the Kośabhāṣya. And it works where a line has kept too few letters for any search. The unidentified pieces of two British Library volumes, 476 of them, were simply read, and so were the blocks that the matching by piece had left without a record."
+
+"Three fragments were collated with the Pāli, taken from the Dharmamitra database. In SHT XI 4501 three clauses of the sūtra of the cloth similes (AN 3.99) stand nearly word for word and in order; *ya etaṃ sevante bhajante pa(ryupāsate)* answers to *ye kho panassa sevanti bhajanti payirupāsanti*."
+
+"A text once found can be followed for more. SHT VIII 1883, the bad monk as a great robber, turned out to stand in the numerical section of the Sarvāstivāda Vinaya (T 1435, 346a–378c), a stretch of short sūtra-like pieces between lists of Vinaya terms. Its 44 longer passages were read and their key words looked up in all Berlin and British Library entries. One sūtra of SHT VI 1252, on monks who quarrel, is there, under the ones, which explains why the fragment has a sūtra of threes among sūtras of ones. On the way a British Library piece, Or.15009/468, proved to be the list of headings that opens the Vinayamātṛkā; the Chinese (T 1441) has most of its lines, and the Tibetan has every one. The fragments that the editors compare with the Divyāvadāna were read against the Vinayas in the same manner: SHT VI 1519 is plausibly the story of Sahasodgata as the Mūlasarvāstivāda Vinayavibhaṅga tells it (T 1442, 813c)."
+
+"The reading has limits of its own. It was done on the printed transliterations; photographs were compared in a few cases only. And it does not replace a check of the literature: K. Kano checked the list as it stood on 13 November against SHT XII and XIII, and the rows added since are not yet checked."
 
 ## What was found
 
