@@ -9,9 +9,9 @@ description: >-
 
 <!--
 SKELETON. Everything inside comments is a note for writing and should be deleted before the
-post moves to _posts/. Numbers are those of the findings page on 21 Nov 2026, 13:43 (research
-commit 3d581bf; 138 rows: 61 identified, 34 plausible, 8 editors' leads confirmed, 35 already
-identified elsewhere; that morning 134 rows: 56, 34, 9, 35; on 17 Nov 102 rows: 36, 21, 10, 35); refresh them from research/turfan-sht
+post moves to _posts/. Numbers are those of the findings page on 21 Nov 2026, 18:22 (research
+commit 3777ce5; 140 rows: 63 identified, 34 plausible, 8 editors' leads confirmed, 35 already
+identified elsewhere; at 13:43 138 rows: 61, 34, 8, 35; that morning 134 rows: 56, 34, 9, 35; on 17 Nov 102 rows: 36, 21, 10, 35); refresh them from research/turfan-sht
 (GitHub: kengoharimoto/etexts-research) before publishing.
 
 BEFORE PUBLISHING, check:
@@ -43,11 +43,11 @@ table, or one evidence card with the Chinese beside it. See points 1, 3 and 4 ab
     on 20–21 Nov cover about 35 catalogue numbers, joined pieces counted singly. The last
     sentence gives the findings page of 21 Nov.
   - The new rows of 20–21 Nov are not yet checked against SHT XII and XIII
-    (results/FOR_KANO.md: 32 Berlin rows, 21 identified and 11 plausible, and 1519, whose
+    (results/FOR_KANO.md: 34 Berlin rows, 23 identified and 11 plausible, and 1519, whose
     proposal changed after K. Kano's check). The British Library rows are checked against
     BLSF I–III only, some also against Chung 2008 and Wille's survey of 2014.
-  - Counts by collection in the last sentence: README table at commit 3d581bf (Berlin
-    42 / 26 / 6 / 33, British Library 17 / 7 / 2 / 2, St Petersburg 2 / 1 / – / –). -->
+  - Counts by collection in the last sentence: README table at commit 3777ce5 (Berlin
+    44 / 26 / 6 / 33, British Library 17 / 7 / 2 / 2, St Petersburg 2 / 1 / – / –). -->
 
 So, we had this wonderful workshop in Komazawa and Sendai about Abhidharma texts in the week of 9–13 November 2026. During the workshop, our long time friend, Prof. Kazuo Kano of Komazawa University came up with an idea: what if we apply AI and other computational tools that we have today to identify unidentified Sanskrit manuscript fragments? We decided to first focus on Central Asian manuscript fragments made accessible through the long standing German publications of Central Asian Sanskrit manuscript collection and now the International Dunhuang Programme (IDP). 
 
@@ -69,7 +69,7 @@ Things have changed. For one, Dharmamitra can search the Sanskrit, Chinese, Tibe
 
 Initially, we tried to identify fragments in SHT I–XI that were not yet identified or for which only the genre was mentioned. We came up with about 100 matches. Then volumes XII and XIII became available to Kazuo Kano and he compared our identifications with them. Thirty-five of our matches had already been identified: 19 in volumes XII and XIII, and 16 in the volumes we had read ourselves (SHT I–XI and BLSF) or elsewhere in the literature, for instance in the additions and corrections that each volume carries to the earlier ones. It was a good thing. For one, we got confirmations that our identifications were correct.
 
-On the other hand, Kano's list of what volumes XII and XIII newly identify had about 100 items that our pipeline had not identified. We analyzed why and improved our methodologies. After that, we identified or proposed plausible candidates for about three dozen more items. Along the way we also took in the British Library's fragments and made a start on those in St. Petersburg. As of 21 November, our list has 138 rows: 61 identified (42 from Berlin, 17 from the British Library, 2 from St. Petersburg), 34 plausible (26, 7 and 1), 8 that confirm a lead the editors give, and 35 that were already identified.
+On the other hand, Kano's list of what volumes XII and XIII newly identify had about 100 items that our pipeline had not identified. We analyzed why and improved our methodologies. After that, we identified or proposed plausible candidates for about three dozen more items. Along the way we also took in the British Library's fragments and made a start on those in St. Petersburg. As of 21 November, our list has 140 rows: 63 identified (44 from Berlin, 17 from the British Library, 2 from St. Petersburg), 34 plausible (26, 7 and 1), 8 that confirm a lead the editors give, and 35 that were already identified.
 
 What follows is how it was done in some details, mostly written by Claude. One may read "Claude" when the following says "the study." The text in brackets are added by me.
 
@@ -151,7 +151,9 @@ quotation marks as in the Nepalese scribes post. To check before publishing:
 
 "Most of them could not be searched, because there is nothing to search. For 2,228 of the 4,017 SHT numbers the catalogue prints no transliteration: the entry describes a scrap of one or two centimetres and ends 'noch nicht bestimmt'. Another 106 have a transliteration in which no eight letters in a row are legible. Of the British Library pieces, 465 are too small in the same two ways."
 
-"The parsers needed more than one round. In the first run the SHT parser missed 218 of the 4,017 numbers. For most of them the OCR had joined the heading of the entry to the end of the last line of the entry before it, usually at a page break, and the parser looked for a heading at the beginning of a line. Where a heading was lost, the text of the entry was read as part of the entry before it. We changed the parser and parsed all volumes again on 19 November. This added 279 entries, and 88 entries gave up lines that belong to the number after them. Three identifications that were already on our list turned out to rest on the next number's text and were withdrawn (SHT 963, 3238 and 3299 + 4187), and one moved from 1957 to 1958. The 139 fragments that were new or had changed were searched like the others. Twenty-five numbers are still without an entry: sixteen were transferred to another collection or merged into another number, and nine have no description of their own. A second correction on 21 November, for headings lost in SHT I and IV, changed no finding. The same check was then made for the British Library volumes, where the shelfmarks of each series should run without gaps. They did not: 206 entries were missing, because the parser expected a heading in bold and the OCR gives many without. Of the 206, 52 are unidentified pieces with enough text to search. They went through all the searches and were read; two of them could be given a text, and a third plausibly. No piece searched before changed its text."
+"The parsers needed more than one round. In the first run the SHT parser missed 218 of the 4,017 numbers. For most of them the OCR had joined the heading of the entry to the end of the last line of the entry before it, usually at a page break, and the parser looked for a heading at the beginning of a line. Where a heading was lost, the text of the entry was read as part of the entry before it. We changed the parser and parsed all volumes again on 19 November. This added 279 entries, and 88 entries gave up lines that belong to the number after them. 
+
+Three identifications that were already on our list turned out to rest on the next number's text and were withdrawn (SHT 963, 3238 and 3299 + 4187), and one moved from 1957 to 1958. The 139 fragments that were new or had changed were searched like the others. Twenty-five numbers are still without an entry: sixteen were transferred to another collection or merged into another number, and nine have no description of their own. A second correction on 21 November, for headings lost in SHT I and IV, changed no finding. The same check was then made for the British Library volumes, where the shelfmarks of each series should run without gaps. They did not: 206 entries were missing, because the parser expected a heading in bold and the OCR gives many without. Of the 206, 52 are unidentified pieces with enough text to search. They went through all the searches and were read; two of them could be given a text, and a third plausibly. No piece searched before changed its text."
 
 | | SHT, undetermined | SHT, genre label only | SHT together | British Library |
 |---|---|---|---|---|
@@ -164,7 +166,7 @@ quotation marks as in the Nepalese scribes post. To check before publishing:
 
 "The 1,658 SHT numbers make 1,644 fragments as we searched them, since pieces that the catalogue joins count once. With the 429 British Library pieces, 2,073 fragments were searched. Not all of them were searched in every way. All went through the match against the e-text library. The 1,279 with at least 40 legible letters (1,107 from Berlin, 172 from London) also went to Dharmamitra search, and 986 fragments (859 and 127) were sent through Chinese as well. The remaining 794, with fewer than 40 letters, were tried against the e-text library only."
 
-"After the comparison with SHT XII and XIII, described below, the same fragments were gone through again in three more ways. Each entry was cut into blocks, one side of one piece, 4,912 in all, and matched block by block, with a lower threshold and a test that the hit is not shared by many works. This run also took in 72 catalogue numbers of mixed status, with some pieces identified and others not, which the first run had left out. The Sanskrit files that are in the Dharmamitra database but were not returned by the search we queried, 1,500 of 3,274, were written out and matched directly. And the route through Chinese was built a second time without a translation model: a table of 1,080 Sanskrit stems with the renderings of the Chinese translators, by which the terms of a fragment are searched in the Taishō in the order they have in the fragment."
+"After the comparison with SHT XII and XIII, described below, the same fragments were gone through again in three more ways. Each entry was cut into blocks, one side of one piece, 4,912 in all, and matched block by block, with a lower threshold and a test that the hit is not shared by many works. At first a short hit was kept only when it was in a Buddhist text; the hits dropped for that reason were read afterwards. This run also took in 72 catalogue numbers of mixed status, with some pieces identified and others not, which the first run had left out. The Sanskrit files that are in the Dharmamitra database but were not returned by the search we queried, 1,500 of 3,274, were written out and matched directly. And the route through Chinese was built a second time without a translation model: a table of 1,080 Sanskrit stems with the renderings of the Chinese translators, by which the terms of a fragment are searched in the Taishō in the order they have in the fragment."
 
 "Last, some fragments were not searched again but read against a text that an earlier result pointed to. Three were collated with the Pāli. The fragments that the editors compare with the Divyāvadāna were read against the Chinese and Tibetan Vinayas, since much of the Divyāvadāna is taken from the Mūlasarvāstivāda Vinaya. And when one fragment turned out to stand in the numerical section of the Sarvāstivāda Vinaya (T 1435, 346a–378c), the 44 longer passages of that section were read through for other fragments. Two pieces moved from plausible to identified in this way, and a British Library piece was found to be the list of headings that opens the Vinayamātṛkā."
 
@@ -174,14 +176,14 @@ quotation marks as in the Nepalese scribes post. To check before publishing:
 
 <!-- METHODS: Claude's prose of 21 Nov 2026, each paragraph in quotation marks, written from
 the README (Method, steps 5–13) and results/REVIEW.md of research/turfan-sht at commit
-3d581bf. Six subsections, ordered by kind (each later method follows the one it grew out
+3d581bf; "Matching by piece" revised at commit 3777ce5 (REVIEW AH). Six subsections, ordered by kind (each later method follows the one it grew out
 of), not by date; "The fragments" tells the order in time. To check, for all of them:
   - Short pieces of transliteration are quoted (1632, 1686, 1309, 1420, 1946, 4501,
     Or.15009/468), on your word of 18 Nov that quoting SHT transliterations is fine; point 1
     at the top still stands for the British Library piece.
   - Fragments named as examples must be cleared (point 2 at the top). Of those named as
     new, only 1632, 1686, 1433, 1685 and 2028 were on the page at K. Kano's check of
-    13 Nov; 1946, 1837, 1380, 1574, 1622, 2094, 1252, 4501, 1883, 1519 are not checked
+    13 Nov; 23, 1630, 1946, 1837, 1380, 1574, 1622, 2094, 1252, 4501, 1883, 1519 are not checked
     against SHT XII and XIII.
   - Figures are those of the notes; none was recounted for this section. -->
 
@@ -205,14 +207,29 @@ with him or take the sentence out. -->
 
 <!-- REVIEW Y, Z; README step 12; XII_XIII_MISSES.md, cause C and the 60 never searched.
 The block count is 4,912 after the parser fix of 21 Nov (4,963 before); "22 per cent" is
-144 added to 647 on the identified fragments; 247 of 372 is from the first run of the rule
-without the restriction. -->
+144 added to 647 on the identified fragments, 26 per cent is 170 (REVIEW Y). The third and
+fourth paragraphs follow REVIEW AH (21 Nov, commit 3777ce5), written after your objection
+to the Buddhist-only rule; the paragraph does not name you, add a bracket if you wish. The
+figure given here before, 247 of 372 short hits outside Buddhist texts, was wrong (the
+count tested the file name without its path); the right figures are 115 outside and 365
+in Buddhist files. The rule is still in the script as a filter for the main list; what it
+drops now goes to results/block_candidates_other.tsv and is read. The 115 by place:
+śāstra 38, Śaiva and Vaiṣṇava texts 25, Dharmamitra files outside the index 16, kāvya,
+drama, poetics and anthologies 13, purāṇas 11, Mahābhārata 8, Veda 3, an inscription 1.
+SHT 23: the hit was 29 letters in one run, in the Rājanighaṇṭu; the leaf is in Gupta
+script, the nighaṇṭu is much later, so "kept in" and not "from". 1630: Subhāṣitāvalī
+3320 is marked sārāśītyām there. Neither is checked against SHT XII and XIII (SHT XIII
+has 23 c as Tridaṇḍamālā 3.3.11). -->
 
 "In the first run the unit was the catalogue number, with all its pieces pooled. The comparison with SHT XII and XIII showed what this costs. SHT V 1198 has the Saddharmapuṇḍarīka on two of its pieces and, as SHT XIII now says, the Madhyāntavibhāgabhāṣya on a third; the number was taken as one text and the third piece was not looked at again. And a number with some pieces identified and others not was in neither of our sets."
 
-"So each entry was cut into blocks, one side of one piece each: 4,912 blocks, those of 72 numbers of mixed status among them. The same matcher was run with lower thresholds. Lower thresholds alone bring in chance: in a first trial, 247 of 372 short hits were in purāṇas, tantras and kāvya. A short hit is therefore kept only when no more than two other works come near it and the text is a Buddhist one. On the identified fragments this rule adds 22 per cent to the hits."
+"So each entry was cut into blocks, one side of one piece each: 4,912 blocks, those of 72 numbers of mixed status among them. The same matcher was run with lower thresholds. Lower thresholds alone bring in chance, since a short phrase may stand in many texts. A short hit is therefore kept only when no more than two other works come near it."
 
-"It recovered pieces that SHT XIII has and that we had missed by a few letters, among them 1198 a. The blocks on numbers for which nothing had been recorded were then read one by one. Four could be given a text: SHT VI 1380 (Madhyamāgama 28), 1574 piece b (the Larger Prajñāpāramitā, chapter 76), VII 1622 (a set of maṅgala verses) and IX 2094 (verses of the Abhidharmakośa without the Bhāṣya). Of the forty mixed numbers that had hits, 29 only confirmed the pieces already named; one gave something new, pieces b and c of SHT VI 1252. What this search still does not reach are pieces of a line with fewer than ten letters."
+"At first there was a second condition: the text had to be a Buddhist one. The reason was that most short hits in purāṇas, tantras and kāvya are chance. On the identified fragments the rule adds 22 per cent to the hits with this condition and 26 per cent without it. [I objected to this restriction upon reading about it in this blog draft. I expressed my concern to Claude on the workstation. Then...] But the condition shut out the literature that only this search can reach. The routes through Chinese and Tibetan lead to Buddhist texts by their nature; a medical text, a grammar or a poem can be found only in the library. The test was also a blunt one. It went by the place of a file in the library, so the Buddhacarita passed it, and the Saundarananda, which is filed under kāvya, did not. Longer hits were never under the condition, and two pieces of the Yogaśataka, a medical text, had been found by them."
+
+"So the 115 short hits that the condition had dropped were read as well. Most are indeed chance: single words shared with a kāvya, or stock phrases of Buddhist verse and of spells that the purāṇas and tantras have too. Two are real. On leaf b of SHT I 23 a second hand added three verses in praise of buttermilk, and these are kept in the medical glossaries (Rājanighaṇṭu 15.56–57, one of them also in the Bhāvaprakāśa). Verse 12 of SHT VII 1630, a verse text on rebirth and impermanence, is no. 3320 of Vallabhadeva's Subhāṣitāvalī (*narakanilayāt pretāvāsaṃ* …); the work to which the fragment belongs is still unidentified. Three more fragments could be described by kind: SHT VII 1665 is a grammatical commentary on the suffixes of descent, and 1620 and 1641 are two manuscripts of verses on a preparation against old age. The hits outside Buddhist texts are now written to a list of their own on every run, and that list is read."
+
+"Among the Buddhist texts, the matching by piece recovered pieces that SHT XIII has and that we had missed by a few letters, among them 1198 a. The blocks on numbers for which nothing had been recorded were then read one by one. Four could be given a text: SHT VI 1380 (Madhyamāgama 28), 1574 piece b (the Larger Prajñāpāramitā, chapter 76), VII 1622 (a set of maṅgala verses) and IX 2094 (verses of the Abhidharmakośa without the Bhāṣya). Of the forty mixed numbers that had hits, 29 only confirmed the pieces already named; one gave something new, pieces b and c of SHT VI 1252. What this search still does not reach are pieces of a line with fewer than ten letters."
 
 ### Dharmamitra search
 
@@ -266,7 +283,7 @@ the folding's cost, if one is wanted. -->
 <!-- REVIEW T (ledger; the figures 167 / 154 / 153 / 144 are of REVIEW AB and the count on
 waffle), H, Z, AD–AG. The reading was done by Claude; your introduction says so for "the
 study". The last paragraph should say what you or K. Kano checked; I have written only
-what the notes record (Kano's check of 13 Nov, the 32 rows not checked). 4501: AN 3.99 as
+what the notes record (Kano's check of 13 Nov, the 34 rows not checked). 4501: AN 3.99 as
 numbered on SuttaCentral (PTS 3.97–98). Or.15009/468: T 1441, 593b29–c6; D 7A, pa
 233b–234b. 1883: T 1435, 356a13–b19. 1252: T 1435, 353b2–c7. -->
 
@@ -306,12 +323,12 @@ numbered on SuttaCentral (PTS 3.97–98). Or.15009/468: T 1441, 593b29–c6; D 7
     1837, 1946, 3421 (+ 3921, 3961), 3633 Jñānaprasthāna; 3030, 3316 Prakaraṇapāda;
     4243 Saṅgītiparyāya; 4604 + 1429 Saṃyuktāgama 1172–1173; 2369 Skandila's
     Abhidharmāvatāra (18 Nov; not in SHT XII and XIII according to K. Kano).
-  - Counts on 21 Nov (13:43): 138 rows, 61 identified, 34 plausible, 8 editors' leads, 35
-    already identified. Three of the rows are St Petersburg pieces: SI B/24,14 (verses of
+  - Counts on 21 Nov (18:22): 140 rows, 63 identified, 34 plausible, 8 editors' leads, 35
+    already identified; fourteen more fragments are listed by kind only. Three of the rows are St Petersburg pieces: SI B/24,14 (verses of
     Mahābhārata, Udyogaparvan 70, and 3.203.39 = 12.182.9, with others not in the critical
     text), SI P/16 no. 2 (a Vibhāṣā on the Jñānaprasthāna, T 1545, 921a29–b21), both
     identified, and SI P/16 no. 3 (plausibly the story of King Nanda as in the
-    Kalpanāmaṇḍitikā, T 201, 272c18–273a9). By collection: Berlin 42 / 26 / 6 / 33,
+    Kalpanāmaṇḍitikā, T 201, 272c18–273a9). By collection: Berlin 44 / 26 / 6 / 33,
     British Library 17 / 7 / 2 / 2, St Petersburg 2 / 1 / – / –.
   - New on 21 Nov after the morning (REVIEW AC–AG): Or.15010/40 Śūraṃgamasamādhisūtra
     (T 642, 636a27–b28; folio 36; BLSF II.1 prints it without a title); Or.15007/537
@@ -323,13 +340,20 @@ numbered on SuttaCentral (PTS 3.97–98). Or.15009/468: T 1441, 593b29–c6; D 7
     356a13–b19). 1519, before an editors' lead, is plausibly the story of Sahasodgata as
     in the Mūlasarvāstivāda Vinayavibhaṅga, pāyantika 31 (T 1442, 813c8–22). 1663 was not
     found in the Chinese or Tibetan Vinayas. Or.15003/5 stays a lead, not on the page.
+  - New on 21 Nov, evening (REVIEW AH), from texts outside Buddhist literature: SHT 23,
+    leaf b, the buttermilk verses (Rājanighaṇṭu 15.56–57; Bhāvaprakāśa, takravarga 7);
+    1630, verse 12 = Subhāṣitāvalī 3320, the work itself open. By kind only: 1665 a
+    grammatical commentary on the patronymic suffixes (not the Kāśikā); 1620 and 1641
+    ślokas on a preparation against old age.
   - Joins found from the text, e.g. 2022 + 2025 f.
-  - What kinds of text came out: verse (kāvya, stotra), Vinaya, Āgama sūtras, Abhidharma. -->
+  - What kinds of text came out: verse (kāvya, stotra), Vinaya, Āgama sūtras, Abhidharma;
+    outside Buddhist literature medicine (Yogaśataka, the buttermilk verses), an anthology
+    verse, the Mahābhārata (SI B/24,14), a Śaiva list of tīrthas (827), grammar by kind. -->
 
 ## Already identified
 
 <!-- The lesson of the study: 35 of the matches had been identified before (a third of the
-102 rows of 17 Nov; of 138 now). 19 come from SHT XII and XIII (K. Kano), 15 from SHT I–XI,
+102 rows of 17 Nov; of 140 now). 19 come from SHT XII and XIII (K. Kano), 15 from SHT I–XI,
 BLSF and the literature, one from its printed entry (1746). 33 are Berlin rows, 2 British
 Library.
   - The other direction (results/XII_XIII_MISSES.md): of the 111 rows of Kano's list of
@@ -359,7 +383,7 @@ Library.
 <!-- Subject to point 2 at the top.
   - The check of the list against SHT XII and XIII, which moved twenty pieces to "already
     identified" (19 now, by the README of 21 Nov), and the list of 20 Nov 2026 of what the two volumes
-    newly identify (111 rows). 32 rows added since are with K. Kano for the same check
+    newly identify (111 rows). 34 rows added since are with K. Kano for the same check
     (results/FOR_KANO.md).
   - How the exchange went: each side's results checked by the other. -->
 
@@ -367,6 +391,8 @@ Library.
 
 <!-- - Only fragments whose text is in the library or in the Dharmamitra corpora can be found.
   - Short fragments: under about 40 letters a match is rarely decisive.
+  - Short hits were at first kept only in Buddhist texts; the 115 dropped were read on
+    21 Nov (two real). The library is the only route to texts outside Buddhist literature.
   - 2,334 of the 4,017 SHT numbers have no searchable text in the print at all.
   - The unit was the catalogue number: single pieces of numbers that IDP labels as a whole
     were not searched (31 rows of Kano's list are of this kind).
