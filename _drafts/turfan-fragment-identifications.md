@@ -120,6 +120,16 @@ quotation marks as in the Nepalese scribes post. To check before publishing:
   - Transliterations online: the README of research/turfan-sht still says "No transliterations
     of the SHT fragments are online". You found that the IDP site at the British Library has
     them and that it blocks machine access. The first paragraph says so on your word.
+  - idp.bbaw.de answered again on 22 Nov 2026 (REVIEW AI; item pages by pressmark); the
+    first paragraph says so. You wanted to say that the Berlin site is deprecated. A web check on 22 Nov found no
+    statement of that: the BBAW page on IDP Berlin (turfan.bbaw.de/idp-berlin-en.html)
+    speaks of idp.bbaw.de in the present tense; Wikipedia (International Dunhuang
+    Programme) says London maintains the IDP database and the main English-language
+    website, that the other centres "previously maintained local-language versions" and
+    that "efforts are ongoing to unify the IDP's digital platforms", and lists Berlin among
+    the centres with active websites. idp.bl.uk/about could not be read (403). So the
+    sentence says only that the BL site is the main one. Ask IDP or the Turfanforschung if
+    you want to say more. Whether the Academy's Turfan site is back is not in the notes.
   - The Berlin IDP database and the BBAW Turfan site became inaccessible a few days before
     19 Nov 2026 (your observation). Check whether they are back before publishing. The
     findings table and evidence cards link to the BL site, so the post should point there
@@ -139,7 +149,7 @@ quotation marks as in the Nepalese scribes post. To check before publishing:
     18 Nov that quoting SHT transliterations is fine and that the BBAW's rules concern the
     photographs. -->
 
-"The first step was to get the readings of the fragments. While transliterations of the IDP fragments are online, on the IDP site at the British Library, that site blocks automated access; the Berlin IDP database and the Turfan site of the Berlin Academy gave only photographs and, for each fragment, a one-line identification from the online catalogue. (Both became inaccessible in mid-November, while the study was under way.) So, the study read the printed catalogue instead. We ran Chandra OCR over SHT I–XI on our workstation, and a parser cut the result into entries: catalogue number, shelfmark, script type, physical description, transliteration and notes."
+"The first step was to get the readings of the fragments. While transliterations of the IDP fragments are online, on the IDP site at the British Library, that site blocks automated access; the Berlin IDP database and the Turfan site of the Berlin Academy gave only photographs and, for each fragment, a one-line identification from the online catalogue. (Both became inaccessible in mid-November, while the study was under way. The Berlin IDP database was online again on 22 November. Our list still links to the British Library's site, which is the main site of IDP.) So, the study read the printed catalogue instead. We ran Chandra OCR over SHT I–XI on our workstation, and a parser cut the result into entries: catalogue number, shelfmark, script type, physical description, transliteration and notes."
 
 "Which entries count as unidentified was decided from IDP's online catalogue. One catalogue number often covers several pieces (a, b, c and so on), and the online catalogue lists each piece separately with its own identification. We counted a catalogue number as undetermined only when all of its pieces are marked 'Noch nicht bestimmt'; a number with some pieces identified and others not was left out at first. [Upon realizing that some apparent ones were not searched, w]e added a second group: fragments that carry only a label of genre or collection, such as 'Sūtra-Fragment', 'Abhidharma-Text', 'Dhāraṇī' or 'Medizinisches Fragment', or a hedged one ('Wahrscheinlich …'). They are in effect unidentified as well. [This is an example of transmitting nuances to AI. For me, it is apparent those should have been searched in the first place.]"
 
@@ -228,9 +238,9 @@ has 23 c as Tridaṇḍamālā 3.3.11). -->
 
 "At first there was a second condition: the text had to be a Buddhist one. The reason was that most short hits in purāṇas, tantras and kāvya are chance. On the identified fragments the rule adds 22 per cent to the hits with this condition and 26 per cent without it. [I objected to this restriction upon reading about it in this blog draft. I expressed my concern to Claude on the workstation. Then...] But the condition shut out the literature that only this search can reach. The routes through Chinese and Tibetan lead to Buddhist texts by their nature; a medical text, a grammar or a poem can be found only in the library. The test was also a blunt one. It went by the place of a file in the library, so the Buddhacarita passed it, and the Saundarananda, which is filed under kāvya, did not. Longer hits were never under the condition, and two pieces of the Yogaśataka, a medical text, had been found by them."
 
-"So the 115 short hits that the condition had dropped were read as well. Most are indeed chance: single words shared with a kāvya, or stock phrases of Buddhist verse and of spells that the purāṇas and tantras have too. Two are real. On leaf b of SHT I 23 another scribe wrote three verses in praise of buttermilk after the verses on a caitya, and these verses are found in the medical glossaries (Rājanighaṇṭu 15.56–57, one of them also in the Bhāvaprakāśa). Verse 12 of SHT VII 1630, a verse text on rebirth and impermanence, is no. 3320 of Vallabhadeva's Subhāṣitāvalī (*narakanilayāt pretāvāsaṃ* …); the work to which the fragment belongs is still unidentified. Three more fragments could be described by kind: SHT VII 1665 is a grammatical commentary on the suffixes of descent, and 1620 and 1641 are two manuscripts of verses on a preparation against old age. The hits outside Buddhist texts are now written to a list of their own on every run, and that list is read."
+"So the 115 short hits that the condition had dropped were read as well. Most are indeed chance: single words shared with a kāvya, or stock phrases of Buddhist verse and of spells that the purāṇas and tantras have too. Two are real. On leaf b of SHT I 23 another scribe wrote three verses in praise of buttermilk after the verses on a caitya, and these verses are found in the medical glossaries (Rājanighaṇṭu 15.56–57, one of them also in the Bhāvaprakāśa). Verse 12 of SHT VII 1630, a verse text on rebirth and impermanence, is no. 3320 of Vallabhadeva's Subhāṣitāvalī (*narakanilayāt pretāvāsaṃ* …); the work to which the fragment belongs is still unidentified. For three more fragments we could name only the type of text, not the text itself: SHT VII 1665 is a grammatical commentary on the suffixes of descent, and 1620 and 1641 are two manuscripts of verses on a preparation against old age. The hits outside Buddhist texts are now written to a list of their own on every run, and that list is read."
 
-"Among the Buddhist texts, the matching by piece recovered pieces that SHT XIII has and that we had missed by a few letters, among them 1198 a. The blocks on numbers for which nothing had been recorded were then read one by one. Four could be given a text: SHT VI 1380 (Madhyamāgama 28), 1574 piece b (the Larger Prajñāpāramitā, chapter 76), VII 1622 (a set of maṅgala verses) and IX 2094 (verses of the Abhidharmakośa without the Bhāṣya). Of the forty mixed numbers that had hits, 29 only confirmed the pieces already named; one gave something new, pieces b and c of SHT VI 1252. What this search still does not reach are pieces of a line with fewer than ten letters."
+"Among the Buddhist texts, the matching by piece recovered pieces that SHT XIII has and that we had missed by a few letters, among them 1198 a. Some of the blocks with a hit belong to catalogue numbers for which we had recorded nothing so far, neither an identification nor a verdict on an earlier hit. These blocks were read one by one. Four could be given a text: SHT VI 1380 (Madhyamāgama 28), 1574 piece b (the Larger Prajñāpāramitā, chapter 76), VII 1622 (a set of maṅgala verses) and IX 2094 (verses of the Abhidharmakośa without the Bhāṣya). Of the forty mixed numbers that had hits, 29 only confirmed the pieces already named; one gave something new, pieces b and c of SHT VI 1252. What this search still does not reach are pieces of a line with fewer than ten letters."
 
 ### Dharmamitra search
 
@@ -238,12 +248,16 @@ has 23 c as Tridaṇḍamālā 3.3.11). -->
 judgement of mine from the notes: no row of the page rests on the Dharmamitra search of
 the Sanskrit alone, as far as the notes show (not checked row by row). You may see it
 differently; this is the Dharmamitra blog. The third paragraph states the index gap;
-decide whether and how to say it (note in "The fragments"). "Ascribed to Aśvaghoṣa" is from the database's file names (SA_T10_Aśvaghoṣa_Tridaṇḍamālā); check how you want the work described. Cause B of XII_XIII_MISSES.md has six rows, seven with 646. The search used was the local
+decide whether and how to say it (note in "The fragments"). The paragraph on 4217 follows REVIEW AI (22 Nov, research commit 147f4d0), written after your two points (the Nayacakra may report a rival school, so read the context; the ink of 4217 is faded); it does not name you. The Nayacakra is Mallavādin's, with Siṃhasūri's commentary (Jambūvijaya's edition); 38,392 segments read from the local database; the two passages are segments 10955 and 5585. The other neighbour was Durveka. The Sängim manuscript: SHT VII 1747, VIII 1903, 1904, 1906, 1907, 1908, X 3278; it names a kośāntarakārikāvṛtti and treats Kośa V 7–8. Measured on the photographs: lines 1.14 cm apart in 1907, 1.2 in 1908 and 4217; a letter about 0.65 cm wide in 1907, 0.6 in 4217. The find-place of 4217 is not known. Claude's reading of the subject (the life faculty and the attainments without mind, Kośa II 41–45) is uncertain and is not in the paragraph. 4217 stays "type of text only" on the page. The composite photograph is not published (point 4 at the top). "Ascribed to Aśvaghoṣa" is from the database's file names (SA_T10_Aśvaghoṣa_Tridaṇḍamālā); check how you want the work described. Cause B of XII_XIII_MISSES.md has six rows, seven with 646. The search used was the local
 stack on the workstation. -->
 
 "Dharmamitra searches the Sanskrit, Chinese, Tibetan and Pāli corpora, by wording and by meaning. Fragments with at least forty legible letters were sent to it: one search by wording for each run of fifteen letters or more, up to six runs, and one search by meaning for the fragment as a whole, with its runs joined. A work counts as a candidate when two of these searches have it among their first five results."
 
-"For Sanskrit texts the search mostly confirmed what the library match had found; for SHT 1632 it named the Gaṇḍavyūha and the Bhadracarī as well. Where no text could be found it often still told us what kind of text a fragment is. For SHT X 4217, a debate that argues with examples of likeness and unlikeness, its nearest neighbours were works of logic; that describes the piece and does not identify it. Its larger part in this study was another one. The Chinese, Tibetan and Pāli that the next subsections use were searched and read in Dharmamitra: the Chinese for the route by translation, the Pāli for the collations, the Tibetan for the two pieces it confirmed."
+"For Sanskrit texts the search mostly confirmed what the library match had found; for SHT 1632 it named the Gaṇḍavyūha and the Bhadracarī as well. Where no text could be found it often still told us what type of text a fragment is."
+
+"[A first draft of this part by Claude said something completely different. The follow-up research and new findings on it were literally prompted by my query.] How far such a neighbour can be trusted shows in SHT X 4217. The fragment has inferences that give a reason with a similar and a dissimilar example (*… vāyuvat, vaidharmyeṇa* …). The search by meaning put two passages of the Nayacakra next to it, a Jaina work that reviews the doctrines of other schools, so it might have been reporting the argument of the fragment. We read the whole Nayacakra, taken from the Dharmamitra database, and it is not. The two passages are inferences of the same build on other matters, and the terms of the fragment do not come together anywhere in the work. The search had matched the form of the argument. A better lead is in the catalogue itself. The entries of 4217 and of SHT VIII 1907 refer to each other for the phrase *vaidharmyeṇa śaśaviṣāṇam*, 'by unlikeness: a hare's horn'. According to the editors, 1907 belongs to a manuscript from Sängim of an unknown commentary on an Abhidharma text, of which seven numbers are known. On the photographs the two agree in the format of the leaf, the distance between the lines and the size of the letters. Whether 4217 is a piece of that commentary, or of that manuscript, is open; the letter forms need the eye of a palaeographer."
+
+"The larger part of Dharmamitra in this study was another one. The Chinese, Tibetan and Pāli that the next subsections use were searched and read in Dharmamitra: the Chinese for the route by translation, the Pāli for the collations, the Tibetan for the two pieces it confirmed."
 
 "One limit came to light through SHT XIII. Many of its identifications rest on the *Tridaṇḍamālā*, an anthology ascribed to Aśvaghoṣa. Eighteen files of that work are in the Dharmamitra database, but the search we queried did not return them, not even for their own sentences. A test of the whole Sanskrit collection showed the same for 1,500 of 3,274 files. We wrote these files out and ran them through the library matcher. With the *Tridaṇḍamālā* files, several of the SHT XIII identifications came out, and so did two fragments that are not among them, SHT VIII 1877 and 1883. The other files confirmed one more and brought nothing new."
 
@@ -288,7 +302,7 @@ what the notes record (Kano's check of 13 Nov, the 34 rows not checked). 4501: A
 numbered on SuttaCentral (PTS 3.97–98). Or.15009/468: T 1441, 593b29–c6; D 7A, pa
 233b–234b. 1883: T 1435, 356a13–b19. 1252: T 1435, 353b2–c7. -->
 
-"None of these searches identifies anything. Each one proposes a text, and the proposal is then read: the lines of the fragment, in their order, against the lines of the text. The cards of our list show this reading. Most proposals do not survive it. The record of verdicts has 787 candidates, and for most of them the verdict is not an identification: the hit tells only the kind of text (167), the text is already named in the printed entry (154), the shared wording is a stock phrase (153), or the hit is chance (144)."
+"None of these searches identifies anything. Each one proposes a text, and the proposal is then read: the lines of the fragment, in their order, against the lines of the text. The cards of our list show this reading. Most proposals do not survive it. The record of verdicts has 787 candidates, and for most of them the verdict is not an identification: the hit tells only the type of text (167), the text is already named in the printed entry (154), the shared wording is a stock phrase (153), or the hit is chance (144)."
 
 "That record did not exist at first, and this cost us. Four of the identifications of SHT XIII had been among our hits and were passed over, because no verdict had been written down for them. Since 20 November every candidate has one."
 
@@ -325,7 +339,7 @@ numbered on SuttaCentral (PTS 3.97–98). Or.15009/468: T 1441, 593b29–c6; D 7
     4243 Saṅgītiparyāya; 4604 + 1429 Saṃyuktāgama 1172–1173; 2369 Skandila's
     Abhidharmāvatāra (18 Nov; not in SHT XII and XIII according to K. Kano).
   - Counts on 21 Nov (18:22): 140 rows, 63 identified, 34 plausible, 8 editors' leads, 35
-    already identified; fourteen more fragments are listed by kind only. Three of the rows are St Petersburg pieces: SI B/24,14 (verses of
+    already identified; fourteen more fragments are listed by type of text only. Three of the rows are St Petersburg pieces: SI B/24,14 (verses of
     Mahābhārata, Udyogaparvan 70, and 3.203.39 = 12.182.9, with others not in the critical
     text), SI P/16 no. 2 (a Vibhāṣā on the Jñānaprasthāna, T 1545, 921a29–b21), both
     identified, and SI P/16 no. 3 (plausibly the story of King Nanda as in the
@@ -343,13 +357,13 @@ numbered on SuttaCentral (PTS 3.97–98). Or.15009/468: T 1441, 593b29–c6; D 7
     found in the Chinese or Tibetan Vinayas. Or.15003/5 stays a lead, not on the page.
   - New on 21 Nov, evening (REVIEW AH), from texts outside Buddhist literature: SHT 23,
     leaf b, the buttermilk verses (Rājanighaṇṭu 15.56–57; Bhāvaprakāśa, takravarga 7);
-    1630, verse 12 = Subhāṣitāvalī 3320, the work itself open. By kind only: 1665 a
+    1630, verse 12 = Subhāṣitāvalī 3320, the work itself open. By type of text only: 1665 a
     grammatical commentary on the patronymic suffixes (not the Kāśikā); 1620 and 1641
     ślokas on a preparation against old age.
   - Joins found from the text, e.g. 2022 + 2025 f.
   - What kinds of text came out: verse (kāvya, stotra), Vinaya, Āgama sūtras, Abhidharma;
     outside Buddhist literature medicine (Yogaśataka, the buttermilk verses), an anthology
-    verse, the Mahābhārata (SI B/24,14), a Śaiva list of tīrthas (827), grammar by kind. -->
+    verse, the Mahābhārata (SI B/24,14), a Śaiva list of tīrthas (827), grammar by type of text only. -->
 
 ## Already identified
 
